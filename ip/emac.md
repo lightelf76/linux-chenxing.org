@@ -24,8 +24,16 @@ code for the AT91RM200
   or other in u-boot at least you can' just use any old number of descriptors.
   
   For the i1/i3:
-  - 8 works, 16 doesn't work, 32 works, 64 works, 96 works, 128 works.
+  - 8 works, 16 doesn't work, 32 works, 64 works, 96 works, 128 works
+  
+  For the i2m:
   - 8 works, 96 doesn't work.
+
+The TSR register has some new bits
+
+| name        | 15 | 14 | 13 | 12        | 11        | 10        | 9         | 8    | 7    | 6 | 5 | 4 | 3 | 2 | 1 | 0                          | notes            |
+|-------------|----|----|----|-----------|-----------|-----------|-----------|------|------|---|---|---|---|---|---|----------------------------|------------------|
+| TSR         |    |    |    | FIFO4IDLE | FIFO3IDLE | FIFO2IDLE | FIFO1IDLE | FBNQ | TBNQ |   |   |   |   |   |   |                            |                  |
 
 - There are some extra registers after the documented ones that are called "JULIAN".
   These are only visable via the RIU interface. The XIU only exposes the standard registers.
@@ -35,3 +43,5 @@ code for the AT91RM200
 | julian 0100 |    |    |    |    |    |    |   |   |   |   |   |   |   |   |   |                            | select mii/rmii? |
 | julian 0104 |    |    |    |    |    |    |   |   |   |   |   |   |   |   |   | software descriptor enable |                  |
 | julian 0108 |    |    |    |    |    |    |   |   |   |   |   |   |   |   |   |                            |                  |
+
+- TAR/TCR seem to load the descriptor address and length into a 4 deep FIFO so that frames can be queued while transmission is on going. 

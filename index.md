@@ -143,7 +143,8 @@ when each type of chip was produced.
 |                           |          | 1936S      |              |                        |                 |                 |              |                                       |                                          |
 |                           | ssc8339d | 1838A      |              |                        |                 |                 |              | yes                                   |                                          |
 | [pioneer3](#pioneer3)     |          |            |              |                        |                 |                 |              |                                       |                                          |
-|                           |          |            |              |                        |                 |                 |              |                                       |                                          |
+|                           | ssd210   |            |              |                        |                 |                 |              |                                       |                                          |
+|                           | ssd212   |            |              |                        |                 |                 |              |                                       |                                          |
 | misc                      |          |            |              |                        |                 |                 |              |                                       |                                          |
 |                           | ssa330d  |            |              |                        |                 |                 |              | [yes](/misc/SSA330D.pdf)              |                                          |
 |                           | ssa530g  |            |              |                        |                 |                 |              | [yes](/misc/SSA530G.pdf)              |                                          |
@@ -251,6 +252,13 @@ Doesn't seem to exist.
 
 - Infinity 6e seems to be a dual core variation in this family
 
+These seem to be i6e based on the build tag found in a kernel image for the SSC8629
+
+- SSC8629D - AI enabled
+- SSC8629G
+  - 70mai A800S https://fccid.io/2AOK9-A800S/Internal-Photos/Internal-Photos-5061810
+- SSC8629Q
+
 ### Pioneer3
 
 - [SSD210](pioneer3#ssd210) - Dual Cortex A7 QFN68
@@ -277,8 +285,6 @@ Doesn't seem to exist.
 - [MSB2521](misc/msb2521.md) - ARM9 based SatNav on a chip
 - MSB2531 - Cortex A7 SatNav on a chip
 - [MSW8535N](misc/MSW8535N_Datasheet.pdf) - ARM9 based feature phone chip?
-- SSC8629D - AI enabled
-- SSC8629Q
 - SSC8668G
 - SSC8539
 - SSA520
@@ -288,7 +294,20 @@ Doesn't seem to exist.
 
 According to the code that is in the wild and SigmaStars page there are some Cortex-A53 based chips.
 
-# MediaTek chips that contain have some MStar heritage
+- SSC8826D - 2 * Cortex A53, QFN
+- SSC8826Q - 2 * Cortex A53, QFN
+- SSC8836Q - Cortex A53, LQFP
+- SSC8838G - Cortex A53, BGA
+- SSC8526 - 2 * Cortex A53, BGA
+- SSD268G - 2 * Cortex A53
+- SSD261Q - 2 * Cortex A53
+- SSR910Q - 2 * Cortex A53, LQFP
+- SSR920G - 2 * Cortex A53, BGA
+
+
+https://wemp.app/posts/1d5e4d06-dab5-408d-8349-7721957ca66e
+
+# MediaTek chips that contain/have some MStar heritage
 
 - MT53xx
 
